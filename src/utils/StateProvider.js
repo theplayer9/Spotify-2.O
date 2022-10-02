@@ -7,3 +7,9 @@ const StateProvider =({children, initialState, reducer})=>(
     {children}
    </StateContext.Provider>
 );
+export default StateProvider;
+
+export const useStateProvider =()=> useContext(StateContext);
+
+
+
