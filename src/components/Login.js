@@ -19,13 +19,18 @@ justify-content: center;
 height: 100vh;
 width: 100vw;
 gap: 5rem;
-background-image: url(${`https://wallpaperaccess.com/full/667773.jpg`});
-background-size: contain;
+background-image: url(${`https://www.teahub.io/photos/full/111-1110876_spotify-wallpaper.jpg`});
+background-size: 100% 100% ;
+background-position: center;
+background-repeat: no-repeat;
+@media (max-width: 700px) {
+      background-image: url(${'https://w0.peakpx.com/wallpaper/945/631/HD-wallpaper-spotify-apps-music-thumbnail.jpg'});
+  }
 // img {
 //     height: 20vh;
 // }
 button {
-    margin-top: 350px;
+    margin-top: 400px;
     padding: 1rem 5rem;
     border-radius: 25rem;
     border: none;
