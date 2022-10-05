@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
+import { reducerCases } from '../utils/Constants';
 import { useStateProvider } from '../utils/StateProvider'
 
 const Playlists = () => {
-    const [{ token }, dispatch] = useStateProvider();
+    const [{ token,playlists }, dispatch] = useStateProvider();
 
     useEffect(() => {
         const getPlaylistData = async () => {
@@ -20,13 +21,19 @@ const Playlists = () => {
                 return { name, id};
             })
             // console.log( playlists)
-
+            dispatch({type: reducerCases.SET_PLAYLISTS, playlists});
         }
         getPlaylistData();
     }, [token, dispatch])
 
     return (
-        <div>Playlists</div>
+        <div>
+            <ul>
+                {playlists.map(({name, id })=>{
+                    return <li key={id} >{name}</li>
+                })}
+            </ul>
+        </div>
     )
 }
 
