@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
+import styled from 'styled-components';
 import { reducerCases } from '../utils/Constants';
 import { useStateProvider } from '../utils/StateProvider'
 
@@ -27,14 +28,18 @@ const Playlists = () => {
     }, [token, dispatch])
 
     return (
-        <div>
+        <Container>
             <ul>
                 {playlists.map(({name, id })=>{
                     return <li key={id} >{name}</li>
                 })}
             </ul>
-        </div>
+        </Container>
     )
 }
 
 export default Playlists
+
+
+const Container = styled.div` 
+`;
