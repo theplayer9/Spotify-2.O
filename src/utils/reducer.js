@@ -31,4 +31,5 @@ export const initialState = {
     token: null,
     playlists: [],
     userInfo: null,
+    selectedPlaylistId: "50SRCSrvOV1q2zW0cdyupP"
 }
