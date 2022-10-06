@@ -17,8 +17,8 @@ const Body = () => {
           }
         })
     }
-  }, [token, dispatch])
-  getInitialPlaylist();
+    getInitialPlaylist();
+  }, [token, dispatch]);
 
   return (
     <Container>Body</Container>
