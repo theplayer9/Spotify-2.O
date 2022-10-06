@@ -40,7 +40,24 @@ const Body = () => {
   }, [token, dispatch, selectedPlaylistId]);
 
   return (
-    <Container>Body</Container>
+    <Container>
+      {
+         selectedPlaylist && (
+          <>
+          <div className='playlist'>
+            <div className='image'>
+              <img src={selectedPlaylist.image} alt="selectedplaylist" />
+            </div>
+            <div className='details'>
+              <span className='type'>PLAYLIST</span>
+              <h1 className='title'>{selectedPlaylist.name}</h1>
+              <p className='description'>{selectedPlaylist.description}</p>
+            </div>
+          </div>
+          </>
+         )
+      }
+    </Container>
   )
 }
 
