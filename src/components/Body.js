@@ -54,6 +54,11 @@ const Body = () => {
               <p className='description'>{selectedPlaylist.description}</p>
             </div>
           </div>
+          <div className='list'>
+            <div className='header__row'>
+              <div className='col'></div>
+            </div>
+          </div>
           </>
          )
       }
