@@ -56,7 +56,18 @@ const Body = () => {
           </div>
           <div className='list'>
             <div className='header__row'>
-              <div className='col'></div>
+              <div className='col'>
+                <span>#</span>
+              </div>
+              <div className='col'>
+                <span>#</span>
+              </div>
+              <div className='col'>
+                <span>#</span>
+              </div>
+              <div className='col'>
+                <span>#</span>
+              </div>
             </div>
           </div>
           </>
