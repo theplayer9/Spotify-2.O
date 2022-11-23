@@ -116,4 +116,17 @@ const Body = () => {
 
 export default Body;
 
-const Container = styled.div``;
+const Container = styled.div`
+ .playlist {
+  margin: 0 2rem;
+  display: felx;
+  align-items: center;
+  gap: 2rem;
+  .image {
+    img{
+      height: 15rem;
+      box-shadow: rgba(0,0,0,0.25) 0px 25px 50px -12px;
+    }
+  }
+ }
+`;
