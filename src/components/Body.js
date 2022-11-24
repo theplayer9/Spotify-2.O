@@ -138,17 +138,15 @@ const Container = styled.div`
       font-size: 4rem;
     }
   }
-
+ }
   .list {
     .header__row {
       display: grid;
       grid-template-columns: 0.3fr 3fr 2fr 0.1fr;
-      color : #dddcdc;
+      color : #e0dede;
       margin: 1rem 0 0 0;
       position : sticky;
       top: 15vh;
     }
   }
-
- 
 `;
