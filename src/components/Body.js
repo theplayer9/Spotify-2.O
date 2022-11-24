@@ -128,5 +128,27 @@ const Container = styled.div`
       box-shadow: rgba(0,0,0,0.25) 0px 25px 50px -12px;
     }
   }
- }
+  .details {
+    display : flex;
+    flex-direction: column;
+    gap: 1 rem;
+    color: #e0dede;
+    .title {
+      color: white;
+      font-size: 4rem;
+    }
+  }
+
+  .list {
+    .header__row {
+      display: grid;
+      grid-template-columns: 0.3fr 3fr 2fr 0.1fr;
+      color : #dddcdc;
+      margin: 1rem 0 0 0;
+      position : sticky;
+      top: 15vh;
+    }
+  }
+
+ 
 `;
