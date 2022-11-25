@@ -91,8 +91,8 @@ const Body = () => {
                         <div className='image'>
                           <img src={image} alt="track" />
                         </div>
-                        <div className='info'>
-                          <span className='name'>{name}</span>
+                        <div className='info '>
+                          <span className='name '>{name}</span>
                           <span>{artists}</span>
                         </div>
                       </div>
@@ -158,7 +158,7 @@ const Container = styled.div`
       .row{
         padding: 0.5rem 1rem;
         display: grid;
-        grid-template-columns: 0.3fr 3.1fr 2fr 0.1fr;
+        grid-template-columns: 0.3fr 3.1fr 1.9fr 0.1fr;
         &:hover {
           background-color: rgba( 0, 0, 0, 0.7);
         }
@@ -166,6 +166,17 @@ const Container = styled.div`
           display: flex;
           align-items: center;
           color: #dddcdc;
+          img{
+            height: 40px;
+          }
+        }
+        .detail {
+          display: flex;
+          gap: 1rem;
+          .info {
+            display: felx;
+            flex-direction: column;
+          }
         }
       }
     }
