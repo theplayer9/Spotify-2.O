@@ -6,7 +6,7 @@ import axios from 'axios';
 import { reducerCases } from '../utils/Constants';
 
 
-const Body = () => {
+const Body = ({headerBackground}) => {
   const [{ token, selectedPlaylistId, selectedPlaylist }, dispatch] = useStateProvider();
   useEffect(() => {
     const getInitialPlaylist = async () => {
@@ -40,7 +40,7 @@ const Body = () => {
   }, [token, dispatch, selectedPlaylistId]);
 
   return (
-    <Container>
+    <Container headerBackground={headerBackground}>
       {
         selectedPlaylist && (
           <>
@@ -149,6 +149,8 @@ const Container = styled.div`
       top: 15vh;
       padding: 1rem 3rem;
       transition: 0.3s ease-in-out;
+      background-color: ${({ headerBackground }) => headerBackground ? "#000000dc" : "none"};
+
     }
     .tracks {
       margin: 0 2rem;
