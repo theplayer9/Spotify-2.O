@@ -4,7 +4,9 @@ import CurrentTrack from './CurrentTrack';
 
 const Footer = () => {
   return (
-    <Container> <CurrentTrack /></Container>
+    <Container> 
+      <CurrentTrack /> // nothing added
+    </Container>
   )
 }
 
