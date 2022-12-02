@@ -15,7 +15,7 @@ const CurrentTrack = () => {
           "Content-Type": "application/json",
         }
       })
-      console.log(response)
+      console.log("this one", response);
 
       // dispatch({ type: reducerCases.SET_PLAYLISTS, playlists });
     }
