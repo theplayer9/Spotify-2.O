@@ -1,11 +1,11 @@
 import axios from 'axios';
-import React from 'react'
 import { useEffect } from 'react';
 import styled from "styled-components"
+import { reducerCases } from '../utils/Constants';
 import { useStateProvider } from '../utils/StateProvider';
 
 const CurrentTrack = () => {
-  const [{ token, playlists }, dispatch] = useStateProvider();
+  const [{ token,currentlyPlaying }, dispatch] = useStateProvider();
 
   useEffect(() => {
     const getCurrentTrack = async () => {
@@ -15,9 +15,18 @@ const CurrentTrack = () => {
           "Content-Type": "application/json",
         }
       })
-      console.log("this one", response);
+      // console.log("this one", response);
+      if( response.data !== ""){
+        const {item}= response.data;
+        const currentlyPlaying = {
+          id: item.id,
+          name: item.name,
+          artists: item.artists.map((artist) => artist.name),
+          image: item.album.images[2].url,
 
-      // dispatch({ type: reducerCases.SET_PLAYLISTS, playlists });
+        }
+      }
+      dispatch({ type: reducerCases.SET_PLAYING, currentlyPlaying });
     }
     getCurrentTrack();
   }, [token, dispatch])
