@@ -31,7 +31,7 @@ const CurrentTrack = () => {
     getCurrentTrack();
   }, [token, dispatch])
   return (
-    <Container> CurrentTrack</Container>
+    <Container> </Container>
   )
 }
 
