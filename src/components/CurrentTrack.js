@@ -5,7 +5,7 @@ import { reducerCases } from '../utils/Constants';
 import { useStateProvider } from '../utils/StateProvider';
 
 const CurrentTrack = () => {
-  const [{ token,currentlyPlaying }, dispatch] = useStateProvider();
+  const [{ token, currentlyPlaying }, dispatch] = useStateProvider();
 
   useEffect(() => {
     const getCurrentTrack = async () => {
@@ -16,8 +16,8 @@ const CurrentTrack = () => {
         }
       })
       // console.log("this one", response);
-      if( response.data !== ""){
-        const {item}= response.data;
+      if (response.data !== "") {
+        const { item } = response.data;
         const currentlyPlaying = {
           id: item.id,
           name: item.name,
@@ -31,7 +31,19 @@ const CurrentTrack = () => {
     getCurrentTrack();
   }, [token, dispatch])
   return (
-    <Container>Container</Container>
+    <Container>{
+      currentlyPlaying && (
+        <div className='track' >
+          <div className='track__image' >
+            <img src={currentlyPlaying.image} alt="currentlyplaying" />
+          </div>
+          <div className='track__info' >
+            <h4>{currentlyPlaying.name}</h4>
+            <h6>{currentlyPlaying.artists.join(", ")}</h6>
+          </div>
+        </div>
+      )
+    }</Container>
   )
 }
 
