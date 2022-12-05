@@ -23,11 +23,10 @@ const CurrentTrack = () => {
           name: item.name,
           artists: item.artists.map((artist) => artist.name),
           image: item.album.images[2].url,
-
         }
+        dispatch({ type: reducerCases.SET_PLAYING, currentlyPlaying });
       }
-      dispatch({ type: reducerCases.SET_PLAYING, currentlyPlaying });
-    }
+    };
     getCurrentTrack();
   }, [token, dispatch])
   return (
