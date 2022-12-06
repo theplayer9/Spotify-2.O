@@ -36,6 +36,7 @@ const CurrentTrack = () => {
           <div className='track__image' >
             <img src={currentlyPlaying.image} alt="currentlyplaying" />
           </div>
+          
           <div className='track__info' >
             <h4>{currentlyPlaying.name}</h4>
             <h6>{currentlyPlaying.artists.join(", ")}</h6>
