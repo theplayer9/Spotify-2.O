@@ -15,7 +15,7 @@ const CurrentTrack = () => {
           "Content-Type": "application/json",
         }
       })
-      // console.log("this one", response);
+      console.log("this one", response);
       if (response.data !== "") {
         const { item } = response.data;
         const currentlyPlaying = {
