@@ -50,13 +50,38 @@ export default CurrentTrack;
 
 
 const Container = styled.div`
-background-color: #181818;
-height: 100%;
-width: 100%;
-border-top: 1px solid #282828;
-display: grid;
-grid-template-columns: 1fr 2fr 1fr;
-align-items: center;
-justify-content: center;
-padding: 0 1rem;
+// background-color: #181818;
+// height: 100%;
+// width: 100%;
+// border-top: 1px solid #282828;
+// display: grid;
+// grid-template-columns: 1fr 2fr 1fr;
+// align-items: center;
+// justify-content: center;
+// padding: 0 1rem;
+
+.track{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+  .track__image {
+    align-item: center;
+    padding: 0 0rem;
+    margin: 0rem;
+
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    h4 {
+      color: white;
+    }
+    h6{
+      color: #b3b3b3;
+    }
+  }
+}
+
 `;
