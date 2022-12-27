@@ -64,7 +64,9 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
-  
+  padding: 0 1rem;
+  color: white;
+
   .track__image {
     align-item: center;
     padding: 0 0rem;
