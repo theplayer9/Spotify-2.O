@@ -50,8 +50,6 @@ export default CurrentTrack;
 
 
 const Container = styled.div`
-
-
 .track{
   display: flex;
   align-items: center;
