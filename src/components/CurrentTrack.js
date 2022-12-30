@@ -53,18 +53,20 @@ const Container = styled.div`
 .track{
   display: flex;
   align-items: center;
+  // justify-content: center;
   gap: 1rem;
-
   .track__image {
     align-item: center;
     padding: 0 0rem;
-    margin: 0rem;
+    // margin: 1rem 0rem 1rem 0rem;
+      margin-bottom: 1rem;
+    // background-color: red;
 
   }
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    // gap: 0.2rem;
     h4 {
       color: white;
     }
